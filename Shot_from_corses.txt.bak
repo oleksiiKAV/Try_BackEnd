@@ -21,9 +21,8 @@ deactivate  - деактивировать виртуальное окружен
 https://django.fun/docs/django/ru/4.0/ref/django-admin/
 pip install django
 
-1) python manage.py startproject name [directory] //создание проекта name
+1) python manage.py startproject name [directory] //создание проекта
 2) settings.py
-	- DEBUG = True
 	- ALLOWED_HOSTS = ['*']
 	- INSTALLED_APPS = [
     'django.contrib.admin',
