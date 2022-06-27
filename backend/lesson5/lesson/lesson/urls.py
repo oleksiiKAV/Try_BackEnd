@@ -13,9 +13,16 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# pylint: disable=no-name-in-module
+# pylint: disable=no-self-argument
+# pylint: disable=missing-class-docstring
+# pylint: disable=trailing-whitespace
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
+#from students.views import my_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    #path('view/', my_view),
+    path('students/', include('students.urls')),
 ]

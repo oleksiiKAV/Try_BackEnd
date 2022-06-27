@@ -19,6 +19,7 @@ deactivate  - деактивировать виртуальное окружен
 
 ********** django *******************
 https://django.fun/docs/django/ru/4.0/ref/django-admin/
+https://prognote.ru/web-dev/back-end/django-quickstart/
 pip install django
 
 1) python manage.py startproject name [directory] //создание проекта name
@@ -34,10 +35,21 @@ pip install django
     'django.contrib.staticfiles',
     'students']
 
-3) python manage.py startapp name [directory] добавляет апп из сеттингов INSTALLED_APPS
+3) python manage.py startapp name [directory] создает апп name - потом добавить апп в сеттинги INSTALLED_APPS
 4) python manage.py migrate // апплаятся все модели и т.д. - ДЕЛАТЬ ВСЕГДА ПРИ ИЗМЕНЕНИИ СТРУКТУРЫ БАЗЫ ДАННЫХ
+4a) python manage.py makemigrations // апплаятся все модели и т.д. - ДЕЛАТЬ ВСЕГДА ПРИ ИЗМЕНЕНИИ СТРУКТУРЫ БАЗЫ ДАННЫХ
 5) python manage.py createsuperuser // создание суперюзера
 6) меняем\добавляем в апп\models.py и после этого
 	python manage.py makemigrations // апплаятся все модели и т.д.
+
+*** STATIC in settings.py  - all views, images and etc ****
+1)  import os
+	STATIC_ROOT = os.path.join(BASE_DIR, 'static')	
+2) run
+	python manage.py collectstatic
+3)  STATICFILE_DIR = str(os.path.join(BASE_DIR, 'static'))
+	STATICFILES_DIRS = (STATICFILE_DIR,)
+	#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 	
+
 end) python manage.py runserver
