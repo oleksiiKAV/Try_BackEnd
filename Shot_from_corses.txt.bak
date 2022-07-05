@@ -42,9 +42,6 @@ pip install django
 6) меняем\добавляем в апп\models.py и после этого
 	python manage.py makemigrations // апплаятся все модели и т.д.
 
-python manage.py startapp account
-class Profile(models.Model):
-	user = mo
 *** STATIC in settings.py  - all views, images and etc ****
 1)  import os
 	STATIC_ROOT = os.path.join(BASE_DIR, 'static')	
